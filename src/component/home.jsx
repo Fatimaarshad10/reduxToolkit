@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import deletIcon from "../icon/deleteData.png";
 import clearIcon from "../icon/clearData.png";
 import addIcon from "../icon/addData.png";
+import styled from "styled-components";
 
 function Home() {
   const getUser = useSelector((state) => {
@@ -21,25 +22,29 @@ function Home() {
   const deletealluser = () => {
     dispatch(deleteAlluser());
   };
+  const Button = styled.button`
+border:none;
+font-weight: 800;
+border-radius: 3px;
+background-color: ${({ theme }) => theme.thirdBg.backgroundColor};
+`
   return (
     <>
       <div class="d-grid gap-2 col-6 mx-auto pb-3 pt-3">
-        <h1 className="bg-primary text-white">
+        <h1 >
           List of the fake email data{" "}
-          <button
-            className="bg-primary"
-            style={{ border: "none" }}
+          <Button
+           
             onClick={() => newUser(allemail())}
           >
             <img src={addIcon} alt="add-data" />
-          </button>
-          <button
-            className="bg-primary"
-            style={{ border: "none", backgroundColor: "white" }}
+          </Button>
+          <Button
+          
             onClick={() => deletealluser()}
           >
             <img src={clearIcon} alt="clear-data" />
-          </button>
+          </Button>
         </h1>{" "}
       </div>
 

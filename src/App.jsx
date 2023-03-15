@@ -16,9 +16,9 @@ import { GlobalStyle } from '../src/styles/global';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layouts />}>
-      <Route index element={<Home />} />
+      <Route index element={<Main />} />
       <Route path="/list" element={<Page data={InitialArticles} />} />
-      <Route path="/main" element={<Main/>} />
+      <Route path="/main" element={<Home/>} />
 
     </Route>
   )
@@ -37,6 +37,7 @@ function App() {
       
     } , 
     thirdBg:{
+    
       backgroundColor : "#F0D0AA"
       
     } , 

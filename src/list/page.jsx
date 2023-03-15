@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Articles from "./list";
+import styled from "styled-components";
 
 function Page({ data }) {
   console.log(data);
@@ -14,16 +15,26 @@ function Page({ data }) {
     );
     setVotes(sortedData);
   };
+  const Button = styled.button`
+    font-size: 1em;
+  margin: 1em;
+  padding: 1rem 1rem;
+  border:none;
+  font-weight: 800;
+  border-radius: 3px;
+  background-color: ${({ theme }) => theme.thirdBg.backgroundColor};
+  `
   return (
     <>
-      <div class="d-grid gap-2 col-6 mx-auto pb-3 pt-3">
-        <button class="btn btn-primary" type="button" onClick={sortData}>
+      <div class="d-grid gap-2 col-6 mx-auto pb-3 ">
+        <Button  onClick={sortData}>
+      
           Most Upvoted
-        </button>
-        <button class="btn btn-primary" type="button" onClick={sortDate}>
-          {" "}
+        </Button>
+        <Button  onClick={sortDate}>
           Most Recent
-        </button>
+        </Button>
+        
       </div>
       <Articles data={votes} />
     </>
