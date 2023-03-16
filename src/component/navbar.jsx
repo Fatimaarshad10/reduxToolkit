@@ -6,16 +6,16 @@ function Layouts() {
     justify-content: space-between;
     background-color: ${({ theme }) => theme.firstBg.backgroundColor};
     padding: 3rem;
-    h2{
-        font-weight: 800;
-      }
+    h2 {
+      font-weight: 800;
+    }
     @media (max-width: 700px) {
       justify-content: flex-start;
-      h2{
+      h2 {
         margin-right: 3rem;
         font-weight: 800;
       }
-  }
+    }
     ul {
       display: flex;
       flex-direction: row;
@@ -34,9 +34,7 @@ function Layouts() {
     <>
       <header>
         <Nav>
-         
-            <h2> SULTAN</h2>
-           
+          <h2> SULTAN</h2>
 
           <ul class="navbar-nav ">
             <li>
@@ -45,13 +43,13 @@ function Layouts() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/list" className="link">
-                List
+              <NavLink to="/articles" className="link">
+                Articles
               </NavLink>
             </li>
             <li>
-              <NavLink to="/main" className="link">
-                Main
+              <NavLink to="/emails" className="link">
+                Emails
               </NavLink>
             </li>
           </ul>

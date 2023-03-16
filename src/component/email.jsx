@@ -15,8 +15,7 @@ function Main() {
     }
   `;
   const SecondBox = styled.div`
-    background-color: ${({ theme }) => 
-    theme.secondBg.backgroundColor};
+    background-color: ${({ theme }) => theme.secondBg.backgroundColor};
     display: flex;
     flex-direction: column;
     height: 28rem;
@@ -25,7 +24,7 @@ function Main() {
   const Heading1 = styled.div`
     margin-top: 5rem;
     margin-right: 4rem;
-    
+
     h3 {
       font-weight: 600;
     }
@@ -47,7 +46,7 @@ function Main() {
       height: 3px;
       background-color: #000000;
     }
-   
+
     @media (max-width: 1000px) {
       margin-left: 2rem;
     }
@@ -76,16 +75,15 @@ function Main() {
   const Image = styled.div`
     margin-top: -35rem;
     margin-left: 26rem;
-    img{
+    img {
       width: 29.3%;
-
     }
     @media (max-width: 1000px) {
-      margin-right : 4rem;
-      img{
-      width: 29.3%;
-      display: none;
-    }
+      margin-right: 4rem;
+      img {
+        width: 29.3%;
+        display: none;
+      }
     }
   `;
   const Heading = styled.h1`
@@ -119,42 +117,37 @@ function Main() {
     }
   `;
   const NewImage = styled.div`
-    img{
+    img {
       display: none;
     }
     @media (max-width: 1000px) {
-      img{
-      width: 30%;
-      display: block;
-      margin-top: 6rem;
-      margin-left : 35rem;
-
-    }
+      img {
+        width: 30%;
+        display: block;
+        margin-top: 6rem;
+        margin-left: 35rem;
+      }
     }
     @media (max-width: 800px) {
-      img{
-      width: 40%;
-      display: block;
-      margin-top: 10rem;
-      margin-left : 22rem;
-
-    }
+      img {
+        width: 40%;
+        display: block;
+        margin-top: 10rem;
+        margin-left: 22rem;
+      }
     }
     @media (max-width: 550px) {
-      img{
-      
-      margin-left : 18rem;
-
-    }
+      img {
+        margin-left: 18rem;
+      }
     }
     @media (max-width: 300px) {
-      img{
+      img {
         width: 80%;
-      margin-left : 10rem;
-
+        margin-left: 10rem;
+      }
     }
-    }
-  `
+  `;
   return (
     <>
       <Container>
@@ -171,12 +164,12 @@ function Main() {
               Laborum rem veniam quam ratione adipisci ut? Cum sit <br />
               ullam natus aliquid,{" "}
             </p>
-<button>Learn More </button>
+            <button>Learn More </button>
           </Heading1>
         </SecondBox>
       </Container>
       <Image>
-        <img src={image} alt=""  />
+        <img src={image} alt="" />
       </Image>
       <Heading>
         SUL <br />
@@ -188,7 +181,7 @@ function Main() {
         <ul>case studies</ul>
       </Footer>
       <NewImage>
-      <img src={image} alt="" />
+        <img src={image} alt="" />
       </NewImage>
     </>
   );

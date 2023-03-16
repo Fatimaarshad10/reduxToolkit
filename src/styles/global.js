@@ -7,7 +7,20 @@ export const GlobalStyle = createGlobalStyle`
 }
 body {
     
-    background-color : ${({theme})=> theme.firstBg.backgroundColor  }
+    background-color : ${({ theme }) => theme.firstBg.backgroundColor}
   }
+ button{
+  font-size: 1em;
+    margin: 1em;
+    padding: 1rem 1rem;
+    border: none;
+    font-weight: 800;
+    border-radius: 3px;
+    background-color: ${({ theme }) => theme.thirdBg.backgroundColor};
+ }
+footer{
+  background-color: ${({ theme }) => theme.thirdBg.backgroundColor};
+  
+}
 
 `;
